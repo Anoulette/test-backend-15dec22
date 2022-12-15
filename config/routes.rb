@@ -3,11 +3,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: 'listings#index'
-  # reservations faites par le client
-  resources :listings do
-    resources :reservations
+
+  namespace :api do
+    namespace :v1 do
+      resources :listings, only: [:index, :show, :create, :update, :destroy]
+      resources :missions, only: :index
+    end
   end
+
+  # reservations faites par le client
   # c'est quand le proprio met en location son appart
-  resources :bookings
+
 end
