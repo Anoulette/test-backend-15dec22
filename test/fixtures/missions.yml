@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_checkin: 1
+  last_checkout: 1
+  checkout_checkin: 1
+  listing: one
+
+two:
+  first_checkin: 1
+  last_checkout: 1
+  checkout_checkin: 1
+  listing: two
