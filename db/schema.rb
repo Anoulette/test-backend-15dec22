@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_15_100336) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_15_131604) do
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
@@ -27,9 +27,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_15_100336) do
   end
 
   create_table "missions", force: :cascade do |t|
-    t.integer "first_checkin"
-    t.integer "last_checkout"
-    t.integer "checkout_checkin"
+    t.date "date"
+    t.integer "mission_type"
+    t.integer "price"
     t.integer "listing_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
